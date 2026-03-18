@@ -1,5 +1,5 @@
 # Section 1: Loop Basics (1–10)
-'''
+
 #1
 for i in range(1,51):
     print(i)
@@ -90,7 +90,6 @@ while True:
     if text.lower() == "stop":
         break
     
-'''
 #Section 3: Nested Loop (16–20)
 
 # 16. *

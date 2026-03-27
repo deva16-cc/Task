@@ -2,9 +2,9 @@
 def create_user(name,age,Role):
     return{"name":name.title(),"age": age,"role": Role}
 users = []
-users.append(create_user("maha",25,"developer"))
-users.append(create_user("balu",28,"manager"))
-print("All users:")
+users.append(create_user("deva",24,"HR"))
+users.append(create_user("peter",25,"cloud engineer"))
+
 for users in users:
     print(users)
 
@@ -20,16 +20,16 @@ def calculate_total(*numbers):
     else:
         average = total / count
     return total, average
-result = calculate_total(50, 60, 70, 80)
+result = calculate_total(10, 20, 30, 40)
 print("Total:", result[0])
 print("Average:", result[1])
 
 #Task 3:
 def system_config(**settings):
-    print("System Configuration:")
-    for key in settings:
-        print(key, ":", settings[key])
-system_config(mode="debug", version="1.0")
+    for key, value in settings.items():
+        print(f"{key}: {value}")
+
+system_config(mode="debug", version="1.0", user="admin")
 
 #Task 4:
 def factorial(n):
@@ -40,10 +40,10 @@ def factorial(n):
         return 1
     result = n * factorial(n - 1)
     return result
-num1 = 6
+num1 = 14
 print("Factorial of", num1, "is:", factorial(num1))
 
-num2 = -2
+num2 = -6
 print("Factorial of", num2, "is:", factorial(num2))
 
 #Task 5: 
@@ -67,8 +67,8 @@ print("Type of generator:", type(gen2))
 #Task 6: 
 
 try:
-    num = int(input("Enter numerator: "))
-    den = int(input("Enter denominator: "))
+    num = int(input("Enter Numerator: "))
+    den = int(input("Enter Denominator: "))
     result = num / den
     print("Result:", result)
 
@@ -76,7 +76,7 @@ except ZeroDivisionError:
     print("Error: Cannot divide by zero")
 
 except ValueError:
-    print("Error: Please enter numbers only")
+    print("Error: Invaid input, Please enter numbers only")
 
 finally:
     print("Program Completed")
